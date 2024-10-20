@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Avance - Dafraoui ELMehdi</title>
+    <link rel="stylesheet" href="./Profil_avence_style.css">
+</head>
+<body>
+    <header>
+        <h1>Dafraoui ELMehdi</h1>
+    </header>
+    
+    <section>
+        <h2>A propos de moi</h2>
+        <p>développeur web full stack créatif, maîtrisant framework Reactjs, framework laravel, JavaScript , PHP , Html , Tailwind Css</p>
+    </section>
+    <section>
+        <h2>Hoppies</h2>
+        <ul>
+            <li>Design</li>
+            <li>natation</li>
+            <li>football</li>
+            <li>Music</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Les Objectifs pour cette année</h2>
+        <ol>
+            <li>Améliorer mes compétences technique en PHP , Javascript , C++ , PLSQL , réseaux Informatique , compilation</li>
+            <li>Participer activement à des projets professionnels en PHP, React.js, et C++, en apportant des solutions techniques innovantes et en garantissant la qualité du code à chaque étape du développement.</li>
+        </ol>
+    </section>
+    
+    <section>
+        <table>
+            <tr>
+                <th>Nom</th>
+                <th>Age</th>
+                <th>Ville</th>
+                <th>Profil</th>
+            </tr>
+            <tr>
+                <td>Redouane Naouasse</td>
+                <td>20</td>
+                <td>Casablanca</td>
+                <td><a href="https://portfolio-redouanenaouass.netlify.app/">Profil Redouane</a></td>
+            </tr>
+            <tr>
+                <td>Imad Aghfire</td>
+                <td>23</td>
+                <td>Casablanca</td>
+                <td><a href="">Profil imad</a></td>
+            </tr>
+            <tr>
+                <td>Khalid wahnini</td>
+                <td>28</td>
+                <td>Casablanca</td>
+                <td><a href="">Profil Khalid</a></td>
+            </tr>
+        </table>
+    </section>
+
+    <section >
+        <h2>Contact</h2>
+        <form action="" onsubmit="handleforms(event)">
+            <input type="text" name="nom" id="nom" placeholder="Votre Nom" >
+            <input type="text" placeholder="exemple-Email@gmail.com" name="email" id="email"  >
+            <textarea name="message" id="message" placeholder="Message" required></textarea>
+            <button type="submit">Soumettre</button>
+        </form>
+    </section>
+    
+    <script>
+        function handleforms(event){
+            event.preventDefault(); 
+    
+            let inputNom = document.getElementById("nom").value;
+            let inputEmail = document.getElementById("email").value;
+            const regexnom = /^[A-Za-zÀ-ÖØ-öø-ÿ'-\s]+$/;
+            const regexEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    
+            if (!regexnom.test(inputNom)) {
+                window.alert("Le champ nom n'est pas valide");
+                return;
+            }
+    
+            if (!regexEmail.test(inputEmail)) {
+                window.alert("Le champ email n'est pas valide");
+                return;
+            }
+    
+            window.alert("Formulaire soumis avec succès");
+        }
+    </script>
+    
+
+</body>
+</html>

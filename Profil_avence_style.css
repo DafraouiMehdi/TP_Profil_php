@@ -1,0 +1,122 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+header {
+    background-color: #4a69ff; /* Deep blue for header */
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    animation: fadeIn 1s; /* Animation for header */
+}
+h1, h2 {
+    margin: 0.5rem 0;
+    transition: color 0.3s; /* Smooth color transition */
+}
+h1:hover, h2:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+section {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s forwards; /* Animation for sections */
+}
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+th, td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+th {
+    background-color: #f4f4f9;
+}
+tr:hover {
+    background-color: #e6f7ff; /* Light blue on row hover */
+    transform: scale(1.01); /* Slight scale effect */
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+input, textarea, button {
+    width: 98%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s; /* Transition for inputs */
+    justify-content: center;
+}
+input:focus, textarea:focus {
+    border: 1px solid #4a69ff; /* Focus border color */
+    box-shadow: 0 0 5px rgba(74, 105, 255, 0.5); /* Focus shadow */
+    outline: none; /* Remove outline */
+}
+button {
+    background-color: #4a69ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Button transition */
+}
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Lift button on hover */
+}
+/* Responsive styling */
+@media (max-width: 600px) {
+    section {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    table, form {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
